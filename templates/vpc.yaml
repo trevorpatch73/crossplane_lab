@@ -1,0 +1,25 @@
+apiVersion: ec2.aws.crossplane.io/v1beta1
+kind: VPC
+metadata:
+  name: "{{ .Values.vpc_name}}"
+  namespace: "{{ .Values.namespace }}"
+spec:
+  forProvider:
+    region: "{{ .Values.region }}"
+    cidrBlock: "{{ .Values.vpc_cidrBlock }}"
+    enableDnsSupport: true
+    enableDnsHostNames: true
+    instanceTenancy: default
+    tags:
+      - key: Name
+        value: "{{ .Values.vpc_name}}"  
+      - key: Location
+        value: AWS US-East-1
+      - key: Environment
+        value: "{{ .Values.namespace}}"
+      - key: Application
+        value: Crossplane
+      - key: Role
+        value: Infrastructure  
+  providerConfigRef:
+    name: provider-aws

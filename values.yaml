@@ -1,0 +1,12 @@
+### START GLOBAL VARIABLES ###
+namespace: default
+region: us-east-1
+global_tags:
+    Environment: Production
+    CostCenter: XXX-XXX-XXX
+### END GLOBAL VARIABLES ###
+
+### START VPC ###
+vpc_name: aws-ue1-hq-prod-frontend-vpc
+vpc_cidrBlock: 30.0.0.0/22
+### END VPC ###
