@@ -22,4 +22,4 @@ spec:
       - key: Role
         value: Infrastructure  
   providerConfigRef:
-    name: provider-aws
+    name: crossplane-provider-aws
