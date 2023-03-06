@@ -1,5 +1,5 @@
 apiVersion: v2
-name:  crossplane-aws-provider-helm-all
+name:  crossplane-lab
 description: A Helm chart for all Crossplane AWS Provider Resources
 
 # A chart can be either an 'application' or a 'library' chart.
